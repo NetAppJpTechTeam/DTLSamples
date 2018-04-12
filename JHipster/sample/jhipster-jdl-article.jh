@@ -1,0 +1,9 @@
+entity Article {
+  title String required,
+  content TextBlob required,
+  date ZonedDateTime required
+}
+ 
+relationship ManyToOne {
+    Article{user(login)} to User
+}
